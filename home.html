@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-sans min-h-screen max-w-md bg-base-200 mx-auto capitalize">
+    <header
+      class="flex justify-between items-center p-[30px] sticky top-0 bg-base-200 z-10"
+    >
+      <div class="left flex gap-1">
+        <img src="./assets/logo.png" alt="" class="w-[60px]" />
+        <div class="info">
+          <h1 id="balance" class="text-2xl font-bold"><span></span>45000</h1>
+          <p>Available Balance</p>
+        </div>
+      </div>
+      <div class="right">
+        <a href="./index.html" class="btn"
+          ><span><i class="fa-solid fa-arrow-right-from-bracket"></i></span
+          >logout</a
+        >
+      </div>
+    </header>
+    <hr class="bg-gray-400" />
+    <section class="p-[30px] w-11/12">
+      <div class="text">
+        <h1 class="text-2xl font-bold">
+          Welcome to pay<span class="text-blue-600">oo</span>
+        </h1>
+        <p class="text-gray-500">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 mt-5 p-6">
+        <button class="btn h-full flex flex-col">
+          <img src="./assets/opt-1.png" alt="" />
+          <p>add money</p>
+        </button>
+        <button class="btn h-full flex flex-col">
+          <img src="./assets/opt-1.png" alt="" />
+          <p>add money</p>
+        </button>
+        <button class="btn h-full flex flex-col">
+          <img src="./assets/opt-1.png" alt="" />
+          <p>add money</p>
+        </button>
+        <button class="btn h-full flex flex-col">
+          <img src="./assets/opt-1.png" alt="" />
+          <p>add money</p>
+        </button>
+        <button class="btn h-full flex flex-col">
+          <img src="./assets/opt-1.png" alt="" />
+          <p>add money</p>
+        </button>
+        <button class="btn h-full flex flex-col">
+          <img src="./assets/opt-1.png" alt="" />
+          <p>add money</p>
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="">
+        <h1 class="text-2xl font-bold ml-7 mb-3">add money</h1>
+        <div
+          class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-xl"
+        >
+          <div class="card-body">
+            <fieldset class="fieldset">
+              <label class="label text-xl font-bold text-black"
+                >select a bank</label
+              >
+              <select class="select" id="select-input">
+                <option disabled selected>select back</option>
+                <option>DBBL</option>
+                <option>IFIC</option>
+                <option>CITY BANK</option>
+              </select>
+              <label class="label text-xl font-bold text-black">bank account number</label>
+              <input
+                id="bank-acc"
+                value="01857979055"
+                type="number"
+                class="input rounded-full"
+                placeholder="Enter 11 digit account number"
+              />
+              <label class="label text-xl font-bold text-black">Amount to add</label>
+              <input
+                id="amount-add"
+                type="text"
+                class="input rounded-full"
+                placeholder="Add Amount to withdraw"
+              />
+              <label class="label text-xl font-bold text-black"
+                >pin Number</label
+              >
+              <input
+                id="add-pin"
+                type="password"
+                class="input rounded-full"
+                placeholder="Enter 4 Digit Pin"
+              />
+              <!-- <div><a class="link link-hover">Forgot password?</a></div> -->
+              <button
+              
+                id="add-money-btn"
+                class="btn btn-neutral mt-6 bg-blue-700 rounded-full"
+              >
+                Add Money
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="">
+      <div
+        class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-xl hidden"
+      >
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-xl font-bold text-black"
+              >Agent Number</label
+            >
+            <input
+              id="caseout-number"
+              type="text"
+              value="12345678901"
+              class="input rounded-full"
+              placeholder="Enter 11 digit number"
+            />
+            <label class="label text-xl font-bold text-black">Amount</label>
+            <input
+              id="amount-input"
+              type="number"
+              class="input rounded-full"
+              placeholder="Enter amount to withdraw"
+            />
+            <label class="label text-xl font-bold text-black">pin Number</label>
+            <input
+              id="pin"
+              type="password"
+              value="1234"
+              class="input rounded-full"
+              placeholder="Enter 4 Digit Pin"
+            />
+            <!-- <div><a class="link link-hover">Forgot password?</a></div> -->
+            <button
+              id="withdraw-btn"
+              class="btn btn-neutral mt-6 bg-blue-700 rounded-full"
+            >
+              Withdraw Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <script src="./add-money.js"></script>
+    <script src="./function.js"></script>
+    <script src="./home.js"></script>
+  </body>
+</html>
